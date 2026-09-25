@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* background */
+    --ba-primary: #121212;
+    --bg-section: #1a1a1a;
+    --bg-card: #222222;
+    --bg-card-hover: #2b2b2b;
+    --bg-input: #202020;
+    --bg-active: #3a241b;
+
+    /* text */
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #a3a3a3;
+    --text-disabled: #737373;
+
+
+    /* details */
+    --boder: #333333;
+    --divider: #292929;
+    --price: #ff6b35;
+    --star: #ffc857;
+    --success: #4caf50;
+}
+
+body{
+    height: 100vh;
+    background: var(--ba-primary);
+}
