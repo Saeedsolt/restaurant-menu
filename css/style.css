@@ -54,11 +54,28 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-.top-header .icon-cart{
 
+.top-header .logo img{
+    width: 7rem;
+    margin-top: -.7rem;
 }
-.top-header .logo{
-    
+
+.bottom-header .poster{
+    width: 96%;
+    height: 9rem;
+    background-image: url(../assets/image/poster.jfif);
+    background-size: cover;
+    margin: 0 auto;
+    filter: brightness(70%);
+    border-radius: .5rem;
+    padding: 2.5rem 0.5rem;
+}
+.bottom-header .poster .title-poster span{
+    color: var(--star);
+}
+.bottom-header .poster p{
+    font-size: 80%;
+    margin-top: .5rem;
 }
 
 /* navbar */
@@ -66,13 +83,13 @@ body{
     background: var(--bg-section);
     display: flex;
     justify-content: space-between;
-    padding: .5rem .7rem;
+    padding: .5rem 1rem;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: .2rem;
+    right: .2rem;
     border-top: 1px solid var(--boder);
 }
 .nav-bar .item-menu{
@@ -81,6 +98,9 @@ body{
     justify-content: center;
     align-items: center;
     
+}
+.nav-bar .item-menu span{
+    font-size: .85rem;
 }
 .active{
     color: var(--star);
