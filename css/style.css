@@ -105,3 +105,26 @@ body{
 .active{
     color: var(--star);
 }
+
+/* main */
+.search-box div{
+    width: 90%;
+    background-color: var(--bg-input);
+    margin: .7rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .2rem .5rem;
+    border-radius: 1.5rem;
+    border: 2px solid var(--boder);
+}
+.search-box div .input-search{
+    background: inherit;
+    outline: none;
+    border: none;
+    margin-right: .3rem;
+}
+.search-box .search-icon{
+    margin-top: .4rem;
+    margin-left: .3rem;
+}
