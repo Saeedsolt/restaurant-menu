@@ -123,6 +123,7 @@ body{
     outline: none;
     border: none;
     margin-right: .3rem;
+    color: var(--text-muted);
 }
 .search-box .search-icon{
     margin-top: .4rem;

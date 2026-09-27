@@ -2,7 +2,7 @@
 // el
 const menuItem = document.querySelectorAll(".item-menu");
 const text = document.querySelector(".text-poster")
-
+const inputSearch = document.querySelector(".input-search")
 
 const textPoster = "تجربه یک وعده غذایی لذت بخش";
 let index = 0;
@@ -22,3 +22,8 @@ const timer =  setInterval(()=>{
         clearInterval(timer)
     }
 }, 100)
+
+// input
+inputSearch.addEventListener("input", ()=>{
+    inputSearch.value = inputSearch.value.replace(/[^a-zA-Z\u0600-\u06FF\s]/g, "")
+})
