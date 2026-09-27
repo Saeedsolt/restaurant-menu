@@ -2,7 +2,8 @@
 // el
 const menuItem = document.querySelectorAll(".item-menu");
 const text = document.querySelector(".text-poster")
-const inputSearch = document.querySelector(".input-search")
+const inputSearch = document.querySelector(".input-search");
+const fillter = document.querySelectorAll(".btn-fillter")
 
 const textPoster = "تجربه یک وعده غذایی لذت بخش";
 let index = 0;
@@ -26,4 +27,9 @@ const timer =  setInterval(()=>{
 // input
 inputSearch.addEventListener("input", ()=>{
     inputSearch.value = inputSearch.value.replace(/[^a-zA-Z\u0600-\u06FF\s]/g, "")
-})
+});
+
+// fillter
+
+const number = 123456789;
+const persianNumber = number.toLocaleString("fa-IR")

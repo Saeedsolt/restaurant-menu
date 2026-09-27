@@ -35,6 +35,10 @@
     font-family: boold;
     src: url(../assets/font/static/GravitasOne-Regular.ttf);
 }
+html{
+    scrollbar-width: none;
+    font-size: 90%;
+}
 body{
     height: 100vh;
     background: var(--ba-primary);
@@ -66,7 +70,6 @@ body{
     background-image: url(../assets/image/poster.jfif);
     background-size: cover;
     margin: 0 auto;
-    filter: brightness(70%);
     border-radius: .5rem;
     padding: 4rem 0.5rem 0;
 }
@@ -124,8 +127,80 @@ body{
     border: none;
     margin-right: .3rem;
     color: var(--text-muted);
+    font-family: vazir;
 }
 .search-box .search-icon{
     margin-top: .4rem;
     margin-left: .3rem;
+}
+
+.fillter{
+    display: grid;
+    grid-template-columns: repeat(8,4rem);
+    gap: 10px;
+    overflow: scroll;
+    direction: ltr;
+    padding: 0.2rem 1rem;
+}
+.fillter-active{
+    padding: .3rem 0;
+    font-family: vazir;
+    border-radius: 1rem;
+    border: none;
+    background: var(--star);
+    color: var(--ba-primary);
+}
+.fillter .btn-fillter{
+    padding: .3rem 0;
+    font-family: vazir;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* products */
+
+.products{
+    width: 100%;
+    padding: 1rem ;
+}
+.products div{
+    background-color: var(--bg-card);
+    border-radius: 1rem;
+    display: flex;
+    padding: .5rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.products .img-product{
+    width: 8rem;
+    height: 6rem;
+    border-radius: 1rem;
+}
+.products .description{
+    display: flex;
+    flex-direction: column;
+    direction: ltr;
+}
+.products .description .category{
+    font-size: .8rem;
+}
+.products .description .price{
+    color: var(--star);
+}
+.products .add-btn{
+    background: var(--star);
+    width: 2.4rem;
+    height: 2.4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+    border-radius: .5rem;
 }
