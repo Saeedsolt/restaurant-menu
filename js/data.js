@@ -2,134 +2,136 @@ const products = [
     {
         id: 1,
         name: "برگر مخصوص",
-        price: 250000,
-        category: "burger",
-        image: ""
+        price: "۲۵۰َ۰۰۰",
+        category: "برگر",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 2,
         name: "چیز برگر",
-        price: 220000,
-        category: "burger",
-        image: ""
+        price: "۲۲۰۰۰۰",
+        category: "برگر",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 3,
         name: "برگر قارچ و پنیر",
-        price: 270000,
-        category: "burger",
-        image: ""
+        price: "۲۷۰۰۰۰",
+        category: "برگر",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 4,
         name: "برگر دوبل",
-        price: 320000,
-        category: "burger",
-        image: ""
+        price: "۳۲۰۰۰۰",
+        category: "برگر",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 5,
         name: "پیتزا مخصوص",
-        price: 350000,
-        category: "pizza",
-        image: ""
+        price: "۳۵۰۰۰۰",
+        category: "پیتزا",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 6,
         name: "پیتزا پپرونی",
-        price: 330000,
-        category: "pizza",
-        image: ""
+        price: "۳۳۰۰۰۰",
+        category: "پیتزا",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 7,
         name: "پیتزا مرغ و قارچ",
-        price: 320000,
-        category: "pizza",
-        image: ""
+        price: "۳۲۰۰۰۰",
+        category: "پیتزا",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 8,
         name: "پیتزا گوشت و قارچ",
-        price: 340000,
-        category: "pizza",
-        image: ""
+        price: "۳۴۰۰۰۰",
+        category: "پیتزا",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 9,
         name: "فیله سوخاری",
-        price: 280000,
-        category: "fried",
-        image: ""
+        price: "۲۸۰۰۰۰",
+        category: "سرخ شده",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 10,
         name: "بال و کتف سوخاری",
-        price: 260000,
-        category: "fried",
-        image: ""
+        price: "۲۶۰۰۰۰",
+        category: "سرخ شده",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 11,
         name: "مرغ سوخاری",
-        price: 299000,
-        category: "fried",
-        image: ""
+        price: "۲۹۰۰۰۰",
+        category: "سرخ شده",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 12,
         name: "پاستا الفردو",
-        price: 290000,
-        category: "pasta",
-        image: ""
+        price: "۲۹۹۰۰۰",
+        category: "پاستا",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 13,
         name: "پاستا گوشت",
-        price: 300000,
-        category: "pasta",
-        image: ""
+        price: "۳۰۰۰۰۰",
+        category: "پاستا",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 14,
         name: "سیب زمینی ویژه ",
-        price: 180000,
-        category: "appetizer",
-        image: ""
+        price: "۱۸۰۰۰۰",
+        category: "پیش غذا",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 15,
         name: "قارچ سوخاری",
-        price: 170000,
-        category: "appetizer",
-        image: ""
+        price: "۱۷۰۰۰۰",
+        category: "پیش غذا",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 16,
         name: "سالاد سزار",
-        price: 190000,
-        category: "salad",
-        image: ""
+        price: "۱۹۰۰۰۰",
+        category: "سالاد",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 17,
         name: "سالاد فصل",
-        price: 140000,
-        category: "salad",
-        image: ""
+        price: "۱۴۰۰۰۰",
+        category: "سالاد",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 18,
         name: "نوشابه",
-        price: 45000,
-        category: "drink",
-        image: ""
+        price: "۴۵۰۰۰",
+        category: "نوشیدنی",
+        image: "../assets/image/pizza.1.jfif"
     },
     {
         id: 19,
         name: "موهیتو",
-        price: 120000,
-        category: "drink",
-        image: ""
+        price: "۱۲۰۰۰۰",
+        category: "نوشیدنی",
+        image: "../assets/image/pizza.1.jfif"
     }
-]
+];
+
+export default products;
