@@ -5,7 +5,7 @@ const products = [
         price: "۲۵۰۰۰۰",
         category: "برگر",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "برگری لذیذ با گوشت گریل‌شده، پنیر، سبزیجات تازه و سس مخصوص که هر لقمه‌اش پر از طعم و مزه است."
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const products = [
         price: "۲۲۰۰۰۰",
         category: "برگر",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "برگری خوش‌طعم با گوشت گریل‌شده، پنیر چدار، نان نرم و سس مخصوص؛ انتخابی کلاسیک برای طرفداران طعم اصیل برگر."
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const products = [
         price: "۲۷۰۰۰۰",
         category: "برگر",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "ترکیبی وسوسه‌انگیز از گوشت گریل‌شده، قارچ تفت‌داده‌شده، پنیر آب‌شده و سس مخصوص، برای عاشقان طعم قارچ و پنیر"
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const products = [
         price: "۳۲۰۰۰۰",
         category: "برگر",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "دو لایه گوشت گریل‌شده در کنار پنیر آب‌شده و سس مخصوص، ترکیبی خوشمزه برای تجربه یک برگر متفاوت و دلچسب."
     },
     {
         id: 5,
@@ -45,7 +45,7 @@ const products = [
         price: "۳۳۰۰۰۰",
         category: "پیتزا",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "پیتزایی خوشمزه با پپرونی‌های لذیذ، پنیر موزارلای کش‌دار و سس مخصوص که ترکیبی جذاب از طعم پنیر و ادویه‌های دلپذیر را ارائه می‌دهد."
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ const products = [
         price: "۳۲۰۰۰۰",
         category: "پیتزا",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "ترکیبی لذیذ از مرغ مزه‌دارشده، قارچ تازه، پنیر کش‌دار و سس مخصوص روی خمیر پیتزای خوش‌طعم."
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ const products = [
         price: "۳۴۰۰۰۰",
         category: "پیتزا",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "گوشت طعم‌دار، قارچ تازه و پنیر موزارلا در کنار سس مخصوص، ترکیبی خوشمزه برای عاشقان پیتزا."
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ const products = [
         price: "۲۸۰۰۰۰",
         category: "سرخ شده",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "ترکیبی هیجان‌انگیز از بال‌های خوش‌طعم و فیله‌های ترد مرغ، مناسب برای یک وعده لذیذ."
     },
     {
         id: 10,
@@ -77,7 +77,7 @@ const products = [
         price: "۲۶۰۰۰۰",
         category: "سرخ شده",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "ترکیبی هیجان‌انگیز از بال‌های خوش‌طعم و فیله‌های ترد مرغ، مناسب برای یک وعده لذیذ."
     },
     {
         id: 11,
@@ -85,7 +85,7 @@ const products = [
         price: "۲۹۰۰۰۰",
         category: "سرخ شده",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "تکه‌های مرغ مزه‌دارشده با پوششی طلایی و ترد، همراه با عطر ادویه‌های مخصوص و طعمی به‌یادماندنی."
     },
     {
         id: 12,
@@ -93,7 +93,7 @@ const products = [
         price: "۲۹۹۰۰۰",
         category: "پاستا",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "پاستای خوش‌عطر با سس آلفردوی خامه‌ای، پنیر و ترکیبی دلپذیر از طعم‌های غنی و دلچسب."
     },
     {
         id: 13,
@@ -101,7 +101,7 @@ const products = [
         price: "۳۰۰۰۰۰",
         category: "پاستا",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "پاستای لذیذ با گوشت طعم‌دار و سس مخصوص، ترکیبی خوشمزه برای دوست‌داران غذاهای ایتالیای"
     },
     {
         id: 14,
@@ -109,7 +109,7 @@ const products = [
         price: "۱۸۰۰۰۰",
         category: "پیش غذا",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "سیب‌زمینی‌های طلایی و ترد با ترکیبی خوشمزه از پنیر و سس مخصوص؛ یک پیش‌غذای وسوسه‌انگیز"
     },
     {
         id: 15,
@@ -117,7 +117,7 @@ const products = [
         price: "۱۷۰۰۰۰",
         category: "پیش غذا",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "قارچ‌های تازه با روکشی طلایی و ترد، میان‌وعده‌ای خوشمزه با بافتی لطیف و طعمی دلچسب"
     },
     {
         id: 16,
@@ -125,7 +125,7 @@ const products = [
         price: "۱۹۰۰۰۰",
         category: "سالاد",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "ترکیبی تازه از کاهو، مرغ گریل‌شده، نان کروتان، پنیر پارمزان و سس مخصوص سزار."
     },
     {
         id: 17,
@@ -133,7 +133,7 @@ const products = [
         price: "۱۴۰۰۰۰",
         category: "سالاد",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "ترکیبی رنگارنگ از سبزیجات تازه و ترد، انتخابی سبک و باطراوت برای همراهی با غذای اصلی."
     },
     {
         id: 18,
@@ -141,7 +141,7 @@ const products = [
         price: "۴۵۰۰۰",
         category: "نوشیدنی",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "نوشیدنی گازدار و خنک برای تکمیل وعده غذایی و لذت بردن از طعم غذاهای موردعلاقه‌ات."
     },
     {
         id: 19,
@@ -149,8 +149,9 @@ const products = [
         price: "۱۲۰۰۰۰",
         category: "نوشیدنی",
         image: "../assets/image/pizza.1.jfif",
-        description: ""
+        description: "ترکیبی خنک و باطراوت از نعناع و لیموترش با طعمی ترش‌وشیرین؛ انتخابی دلچسب برای روزهای گرم."
     }
 ];
 
 export default products;
+
