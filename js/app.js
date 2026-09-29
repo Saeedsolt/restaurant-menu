@@ -6,7 +6,6 @@ const inputSearch = document.querySelector(".input-search");
 const fillter = document.querySelectorAll(".btn-fillter");
 const productsContainer = document.querySelector(".products");
 
-
 const textPoster = "تجربه یک وعده غذایی لذت بخش";
 let index = 0;
 // menu nav
@@ -47,7 +46,7 @@ function displayProducts(productsArray) {
 
     productsArray.forEach(product => {
         productsContainer.innerHTML += `
-            <div>
+            <div class="product-card" data-id="${product.id}">
                 <img src="${product.image}" alt="${product.name}" class="img-product">
 
                 <div class="description">
@@ -85,3 +84,14 @@ inputSearch.addEventListener("input", () => {
 
     displayProducts(filteredProducts);
 });
+
+
+// decription card
+productsContainer.addEventListener("click", (e)=>{
+    if(e.target.closest(".add-btn")) return;
+
+    const card = e.target.closest(".product-card");
+    if(!card) return;
+    const id = card.dataset.id;
+    window.location.href = `../product.html?id=${id}`;
+})

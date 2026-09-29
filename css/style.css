@@ -110,6 +110,9 @@ body{
 }
 
 /* main */
+main{
+    padding-bottom: 4rem;
+}
 .search-box div{
     width: 90%;
     background-color: var(--bg-input);

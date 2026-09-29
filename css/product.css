@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* background */
+    --ba-primary: #121212;
+    --bg-section: #1a1a1a;
+    --bg-card: #222222;
+    --bg-card-hover: #2b2b2b;
+    --bg-input: #202020;
+    --bg-active: #3a241b;
+
+    /* text */
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #a3a3a3;
+    --text-disabled: #737373;
+
+
+    /* details */
+    --boder: #333333;
+    --divider: #292929;
+    --price: #ff6b35;
+    --star: #ffc857;
+    --success: #4caf50;
+}
+@font-face {
+    font-family: vazir;
+    src: url(../assets/font/static/Vazirmatn-Regular.ttf);
+}
+@font-face {
+    font-family: boold;
+    src: url(../assets/font/static/GravitasOne-Regular.ttf);
+}
+html{
+    scrollbar-width: none;
+    font-size: 90%;
+}
+body{
+    height: 100vh;
+    background: var(--ba-primary);
+    color: var(--text-primary);
+    font-family: vazir;
+    transition: all .4s;
+}
+
+
+.card-description{
+    width: 100%;
+    height: 100dvh;
+}
+.card-description .icons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    position: fixed;
+}
+.card-description .card{
+    
+}
+.card-description .card .img-card{
+    width: 100%;
+    
+}
+.card-description .card .img-card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 30%;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5));
+    pointer-events: none;
+}

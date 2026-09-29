@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         name: "برگر مخصوص",
-        price: "۲۵۰َ۰۰۰",
+        price: "۲۵۰۰۰۰",
         category: "برگر",
         image: "../assets/image/pizza.1.jfif"
     },
