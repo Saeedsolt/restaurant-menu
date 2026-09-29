@@ -23,7 +23,7 @@
     --boder: #333333;
     --divider: #292929;
     --price: #ff6b35;
-    --star: #ffc857;
+    --star: #feb82d;
     --success: #4caf50;
 }
 @font-face {
@@ -57,12 +57,26 @@ body{
     justify-content: space-between;
     padding: 1.5rem 1rem;
     position: fixed;
+    top: 0;
 }
 .card-description .card{
     
 }
+.card-description .card .box-descripton{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    padding: 0 1.5rem;
+}
+.card-description .card .box-descripton .category{
+    color: var(--text-disabled);
+}
 .card-description .card .img-card{
-    width: 100%;
+    width: 94%;
+    margin: 4rem auto 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
     
 }
 .card-description .card .img-card::after{
@@ -72,6 +86,55 @@ body{
     width: 100%;
     height: 30%;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.5));
+    background: linear-gradient(100% rgba(0,0,0,0.5));
     pointer-events: none;
+}
+.card-description .card .box-descripton .price{
+    color: var(--star);
+    margin-top: 1rem;
+}
+.card-description .card .box-descripton .text-descripton{
+    color: var(--text-primary);
+    margin-top: 1rem;
+}
+.card-description .card .box-descripton .add-items{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-description .card .box-descripton .add-items div{
+    background: var(--bg-section);
+    width: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+.card-description .card .box-descripton .add-items div .plus,.minus{
+    background: var(--boder);
+    border: none;
+    border-radius: 1rem;
+    padding: .3rem;
+    text-align: center;
+    display: flex;
+    align-self: center;
+}
+
+.card-description .card .box-descripton .add-items div .number{
+    font-size: 1.2rem;
+}
+.card-description .card .box-descripton .card-btn{
+    background-color: var(--star);
+    border: none;
+    display: flex;
+    gap: .7rem;
+    padding: .5rem 0;
+    font-family: vazir;
+    align-items: center;
+    justify-content: center;
+    width: 94%;
+    margin: 2rem auto 0;
+    border-radius: .8rem;
+
 }

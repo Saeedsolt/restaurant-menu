@@ -94,4 +94,5 @@ productsContainer.addEventListener("click", (e)=>{
     if(!card) return;
     const id = card.dataset.id;
     window.location.href = `../product.html?id=${id}`;
+    
 })
