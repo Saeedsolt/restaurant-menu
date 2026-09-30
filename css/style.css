@@ -24,7 +24,7 @@
     --boder: #333333;
     --divider: #292929;
     --price: #ff6b35;
-    --star: #feb82d;
+    --star: #ffb41e;
     --success: #4caf50;
 }
 @font-face {
@@ -145,13 +145,13 @@ main{
     direction: ltr;
     padding: 0.2rem 1rem;
 }
-.fillter-active{
+#fillter-active{
     padding: .3rem 0;
     font-family: vazir;
     border-radius: 1rem;
     border: none;
     background: var(--star);
-    color: var(--ba-primary);
+    color: #000;
 }
 .fillter .btn-fillter{
     padding: .3rem 0;
@@ -187,6 +187,7 @@ main{
     width: 8rem;
     height: 6rem;
     border-radius: 1rem;
+    object-fit: cover;
 }
 .products .description{
     display: flex;
