@@ -3,8 +3,9 @@ import products from "./data.js";
 const menuItem = document.querySelectorAll(".item-menu");
 const text = document.querySelector(".text-poster")
 const inputSearch = document.querySelector(".input-search");
-const fillter = document.querySelectorAll(".btn-fillter");
+const fillter = document.querySelectorAll(".fillter");
 const productsContainer = document.querySelector(".products");
+const btnFillter = document.querySelectorAll(".btn-fillter")
 
 const textPoster = "تجربه یک وعده غذایی لذت بخش";
 let index = 0;
@@ -95,4 +96,26 @@ productsContainer.addEventListener("click", (e)=>{
     const id = card.dataset.id;
     window.location.href = `../product.html?id=${id}`;
     
+});
+
+
+// fillter product
+
+btnFillter.forEach(item=>{
+    item.addEventListener("click", ()=>{
+        const category = item.dataset.category;
+        
+        const fillteredItems = products.filter(item=>{
+            const matchedItem = item.category === category;
+            return matchedItem;
+        })
+
+        displayProducts(fillteredItems);
+        if(category === "همه"){
+            displayProducts(products);
+        }
+
+        btnFillter.forEach(item=>{item.removeAttribute("id")});
+        item.id = "fillter-active"
+    })
 })
