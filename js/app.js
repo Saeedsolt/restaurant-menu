@@ -6,8 +6,13 @@ const inputSearch = document.querySelector(".input-search");
 const fillter = document.querySelectorAll(".fillter");
 const productsContainer = document.querySelector(".products");
 const btnFillter = document.querySelectorAll(".btn-fillter")
+const shopCart = document.querySelector(".shopping-cart");
+const aleart = document.querySelector(".aleart")
 
 const textPoster = "تجربه یک وعده غذایی لذت بخش";
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 let index = 0;
 // menu nav
 menuItem.forEach(item => {
@@ -76,6 +81,9 @@ function displayProducts(productsArray) {
 
 displayProducts(products)
 
+
+
+
 inputSearch.addEventListener("input", () => {
     const searchValue = inputSearch.value.trim().toLowerCase();
 
@@ -118,4 +126,45 @@ btnFillter.forEach(item=>{
         btnFillter.forEach(item=>{item.removeAttribute("id")});
         item.id = "fillter-active"
     })
+});
+
+
+
+
+
+// go to shopping cart
+shopCart.addEventListener("click",()=>{
+    window.location.href = "../cart.html"
+});
+
+
+
+// add to cart shopping card
+productsContainer.addEventListener("click",(e)=>{
+    if(e.target.closest(".add-btn")){
+        const card = e.target.closest(".product-card");
+        const cardId = Number(card.dataset.id);
+        
+        const selectProduct = products.find(item=>{
+            return item.id === cardId;
+        });
+        
+
+        const existingProduct = cart.find(item=>{
+            return item.id === cardId;
+        });
+        if(existingProduct){
+            existingProduct.quantiti++;
+        } else{
+            cart.push({...selectProduct, quantiti: 1});
+        }
+
+        
+    }
+    localStorage.setItem("card", JSON.stringify(cart))
+    
 })
+
+
+
+

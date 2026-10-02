@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* background */
+    --ba-primary: #121212;
+    --bg-section: #1a1a1a;
+    --bg-card: #222222;
+    --bg-card-hover: #2b2b2b;
+    --bg-input: #202020;
+    --bg-active: #3a241b;
+
+    /* text */
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #a3a3a3;
+    --text-disabled: #737373;
+
+
+    /* details */
+    --boder: #333333;
+    --divider: #292929;
+    --price: #ff6b35;
+    --star: #feb82d;
+    --success: #4caf50;
+}
+@font-face {
+    font-family: vazir;
+    src: url(../assets/font/static/Vazirmatn-Regular.ttf);
+}
+@font-face {
+    font-family: boold;
+    src: url(../assets/font/static/GravitasOne-Regular.ttf);
+}
+@keyframes pageEnter {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+html{
+    scrollbar-width: none;
+    font-size: 90%;
+    animation: pageEnter 0.5s ease-out;
+}
+body{
+    height: 100dvh;
+    background: var(--ba-primary);
+    color: var(--text-primary);
+    font-family: vazir;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    
+}
+body.page-exit{
+    opacity: 0;
+    transform: translateY(-15px);
+}
+/* header */
+.header-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem;
+}
+.container-products{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container-products .product-shopping-card{
+    width: 100%;
+    display: flex;
+    background: var(--bg-card);
+    justify-content: space-between;
+    padding: .8rem;
+    border-radius: .5rem;
+    border: 2px solid var(--boder);
+}
+.container-products .product-shopping-card .data-img{
+    display: flex;
+    gap: 1.5rem;
+}
+.container-products .product-shopping-card .img-shop{
+    width: 7.5rem;
+    height: 7rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+.container-products .product-shopping-card .product-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--text-primary);
+}
+.container-products .product-shopping-card .product-data .add-index{
+    background: var(--bg-section);
+    width: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+.container-products .product-shopping-card .product-data span{
+    color: var(--text-muted);
+}
+.container-products .product-shopping-card .product-data .plus, .minus{
+    background: var(--boder);
+    border: none;
+    
+    border-radius: .9rem;
+    padding: .3rem;
+    text-align: center;
+    display: flex;
+    align-self: center;
+}
+.container-products .product-shopping-card .product-data .number{
+    color: var(--text-secondary);
+}

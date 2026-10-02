@@ -59,7 +59,7 @@ container.innerHTML = `
 const minus = document.querySelector(".minus");
 const plus = document.querySelector(".plus");
 const number = document.querySelector(".number");
-const back = document.querySelector(".back")
+const back = document.querySelector(".back-btn");
 
 
 plus.addEventListener("click", ()=>{

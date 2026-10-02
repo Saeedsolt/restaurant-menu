@@ -26,6 +26,7 @@
     --price: #ff6b35;
     --star: #ffb41e;
     --success: #4caf50;
+    --aleert: #f6ca74;
 }
 @font-face {
     font-family: vazir;
@@ -211,4 +212,88 @@ main{
     justify-content: center;
     margin-top: 3.5rem;
     border-radius: .5rem;
+}
+
+/* .aleart{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: var(--bg-card);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--aleert);
+    border-radius: .6rem;
+}
+.aleart-active{
+    display: none;
+}
+.aleart span{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.aleart .close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+
+.aleart{
+    position: fixed;
+    top: 20px;
+    left: 1rem;
+    right: 1rem;
+    transform: translate(-50%, -150%);
+
+    width: min(450px, calc(100% - 30px));
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background: var(--bg-card);
+    color: #fff;
+    border: 1px solid #ffc400;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px #0005;
+
+    opacity: 1;
+    visibility: hidden;
+    z-index: 9999;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.4s ease,
+        visibility 0.4s;
+}
+
+.aleart.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-content span {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+
+.close {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 25px;
+    cursor: pointer;
 }
