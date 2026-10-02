@@ -7,13 +7,15 @@ const fillter = document.querySelectorAll(".fillter");
 const productsContainer = document.querySelector(".products");
 const btnFillter = document.querySelectorAll(".btn-fillter")
 const shopCart = document.querySelector(".shopping-cart");
-const aleart = document.querySelector(".aleart")
+const aleart = document.querySelector(".aleart");
+const close = document.querySelector(".close")
 
 const textPoster = "تجربه یک وعده غذایی لذت بخش";
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 let index = 0;
+let toastTimer;
 // menu nav
 menuItem.forEach(item => {
     item.addEventListener("click", ()=>{
@@ -159,12 +161,25 @@ productsContainer.addEventListener("click",(e)=>{
             cart.push({...selectProduct, quantiti: 1});
         }
 
-        
+        showAleart()
     }
     localStorage.setItem("card", JSON.stringify(cart))
     
 })
 
+// close aleart
 
 
+function showAleart(){
+    clearTimeout(toastTimer);
+    aleart.classList.add("show");
+    
+    toastTimer = setTimeout(()=>{
+        aleart.classList.remove("show");
+    },4000)
 
+}
+close.addEventListener("click", ()=>{
+    aleart.classList.remove("show")
+    clearTimeout(toastTimer)
+})
