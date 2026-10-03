@@ -123,3 +123,9 @@ body.page-exit{
 .container-products .product-shopping-card .product-data .number{
     color: var(--text-secondary);
 }
+
+
+.deleteing-product{
+    height: 2rem;
+    width: 2rem;
+}

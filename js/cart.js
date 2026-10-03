@@ -8,7 +8,13 @@ const home = document.querySelector(".home")
 
 
 let index = 0;
-let productCard = JSON.parse(localStorage.getItem("card"));
+let productCard;
+
+try{
+    productCard = JSON.parse(localStorage.getItem("card") || "[]");
+} catch{
+    productCard = []
+}
 
 
 // delete cart
@@ -21,7 +27,9 @@ deletIcon.addEventListener("click",()=>{
 // back
 back.addEventListener("click",()=>{
     window.location.href = "../index.html"
-})
+});
+
+
 home.addEventListener("click", ()=>{
     window.location.href = "../index.html"
 })
@@ -29,12 +37,12 @@ home.addEventListener("click", ()=>{
 
 // add cart top shopping card
 const addProductToShoppingCard = function(product){
-    if(!product) return;
+    if(product){
     product.forEach((item)=>{
     productsContainer.innerHTML += `
-                <section class="product-shopping-card">
+                <section class="product-shopping-card" data-id="${item.id}">
                 <div  class="deleteing-product">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash preview-icon"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash preview-icon"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
                 </div>
                 <div class="data-img">
                     <div class="product-data">
@@ -48,31 +56,52 @@ const addProductToShoppingCard = function(product){
                         </div>
                         <img src="${item.image}" alt="" class="img-shop">
                         </div>
-                </section>
+                        </section>
                         `
-});
-    // add
-    const minus = document.querySelector(".minus");
-    const plus = document.querySelector(".plus");
-    const number = document.querySelector(".number");
-    
-    plus.addEventListener("click", ()=>{
-    index++;
-    number.textContent = index;
+                    });
+                    const minus = document.querySelector(".minus");
+                    const plus = document.querySelector(".plus");
+                    const number = document.querySelector(".number");
+                    const deleteProduct = document.querySelector(".deleteing-product");
+                    const boxProduct = document.querySelector(".container-products")
+                    
+                    // add
+                    plus.addEventListener("click", ()=>{
+                        index++;
+                        number.textContent = index;
+                        
+                    });
+                    
+                    minus.addEventListener("click", ()=>{
+                        if (index > 0){
+                            index--;
+                            number.textContent = index;
+                        }
+                        });
+                        
+                    // delete product
+                    boxProduct.addEventListener("click", (e)=>{
+                        if(e.target.closest(".deleteing-product")){
+                            const cartProduct = e.target.closest(".product-shopping-card");
+                            const idProduct = cartProduct.dataset.id;
+                            
+                            const getItem = productCard.filter((item)=>{
+                                return item.id !== Number(idProduct);
+                            })
+                            localStorage.setItem("card", JSON.stringify(getItem))
+                            location.reload()
+                        }
+                        
+                    })
+                    
 
-    });
 
-    minus.addEventListener("click", ()=>{
-    if (index > 0){
-        index--;
-        number.textContent = index;
-    }
-
-    
-    
-});
+}
 }
 
-addProductToShoppingCard(productCard)
+
+
+
+addProductToShoppingCard(productCard);
 
 

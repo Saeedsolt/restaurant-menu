@@ -12,7 +12,7 @@ const close = document.querySelector(".close")
 
 const textPoster = "تجربه یک وعده غذایی لذت بخش";
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("card")) || [];
 
 let index = 0;
 let toastTimer;
@@ -162,8 +162,8 @@ productsContainer.addEventListener("click",(e)=>{
         }
 
         showAleart()
+        localStorage.setItem("card", JSON.stringify(cart));
     }
-    localStorage.setItem("card", JSON.stringify(cart))
     
 })
 
