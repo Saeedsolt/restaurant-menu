@@ -100,24 +100,34 @@ const addProductToShoppingCard = function(product){
 }
 }
 
+
+
 // payment
-const payment = function(product){
-    product.forEach(item=>{
-        const priceNumber = item.price;
-        persianToEnglish(priceNumber)
-        console.log(persianToEnglish);
-        
-        
-    })
-}
-
-payment(productCard);
-
-function persianToEnglish(str) {
+const persianToEnglish = function (str) {
     return str.replace(/[۰-۹]/g, (digit) =>
         "۰۱۲۳۴۵۶۷۸۹".indexOf(digit)
     );
 }
+
+const englishToPersian = function(number){
+    return number.toString().replace(/\d/g,digit => "۰۱۲۳۴۵۶۷۸۹"[digit])
+}
+
+
+
+const payment = function(product){
+    const totalPrice = product.reduce((total, item)=>{
+        const price = Number(persianToEnglish(item.price))
+        return total +(price * item.quantiti)
+    }, 0);
+    return englishToPersian(totalPrice)
+    
+}
+
+payment(productCard);
+priceSpan.textContent = `${payment(productCard)} هزار تومان`
+
+
 
 
 
