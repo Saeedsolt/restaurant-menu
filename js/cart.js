@@ -4,7 +4,8 @@ import products from "./data.js";
 const back = document.querySelector(".back-btn");
 const productsContainer = document.querySelector(".container-products")
 const deletIcon = document.querySelector(".delete-shopping-card")
-const home = document.querySelector(".home")
+const home = document.querySelector(".home");
+const priceSpan = document.querySelector(".price-span")
 
 
 let index = 0;
@@ -97,6 +98,25 @@ const addProductToShoppingCard = function(product){
 
 
 }
+}
+
+// payment
+const payment = function(product){
+    product.forEach(item=>{
+        const priceNumber = item.price;
+        persianToEnglish(priceNumber)
+        console.log(persianToEnglish);
+        
+        
+    })
+}
+
+payment(productCard);
+
+function persianToEnglish(str) {
+    return str.replace(/[۰-۹]/g, (digit) =>
+        "۰۱۲۳۴۵۶۷۸۹".indexOf(digit)
+    );
 }
 
 

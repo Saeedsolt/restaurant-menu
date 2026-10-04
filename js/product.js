@@ -1,11 +1,13 @@
 import products from "./data.js";
 
 // el
-const container = document.querySelector(".card-description")
+const container = document.querySelector(".card-description");
+const close = document.querySelector(".close");
+const aleart = document.querySelector(".aleart");
 
-
-let index = 0;
-
+let cart = JSON.parse(localStorage.getItem("card")) || [];
+let index = 1;
+let toastTimer;
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
@@ -13,10 +15,10 @@ const product = products.find(item =>{
     return item.id === Number(productId);
 })
 
-
+container.dataset.id = product.id;
 container.innerHTML = `
     <div class="icons">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart preview-icon"><path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/><path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg>
+            <svg class="shopping-card" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart preview-icon"><path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/><path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg>
             <svg class="back-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left preview-icon"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
         </div>
         <div class="card">
@@ -60,7 +62,8 @@ const minus = document.querySelector(".minus");
 const plus = document.querySelector(".plus");
 const number = document.querySelector(".number");
 const back = document.querySelector(".back-btn");
-
+const cardBtn = document.querySelector(".card-btn");
+const shoppingCard = document.querySelector(".shopping-card")
 
 plus.addEventListener("click", ()=>{
     index++;
@@ -83,4 +86,43 @@ back.addEventListener("click", ()=>{
     }, 400)
 })
 
+// add to 
+container.addEventListener("click", (e)=>{
+    if(e.target.closest(".card-btn")){
+        const containerBtn = e.target.closest(".card-description");
+        const idProduct = Number(containerBtn.dataset.id);
+        const dataProduct = products.find((item)=>{
+            return item.id === idProduct;
+        })
+        
+        
+        const dataLocal = cart.find(item=> item.id === idProduct);
+        if(dataLocal){
+            dataLocal.quantiti = index;
+        } else{
+            cart.push({...dataProduct, quantiti: index});
+        }
+        showAleart()
+        localStorage.setItem("card", JSON.stringify(cart))
+        
+    }
+});
 
+function showAleart(){
+    clearTimeout(toastTimer);
+    aleart.classList.add("show");
+    
+    toastTimer = setTimeout(()=>{
+        aleart.classList.remove("show");
+    },4000)
+
+}
+
+close.addEventListener("click", ()=>{
+    aleart.classList.remove("show")
+    clearTimeout(toastTimer)
+})
+
+shoppingCard.addEventListener("click", ()=>{
+    window.location.href = "../cart.html"
+})

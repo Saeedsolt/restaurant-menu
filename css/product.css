@@ -170,3 +170,41 @@ body.page-exit{
     gap: .2rem;
 }
 
+.aleart{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: var(--bg-card);
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--aleert);
+    border-radius: .6rem;
+    transform: translate(0, -150%);
+    box-shadow: 0 8px 30px #0005;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    transition:
+        transform 0.5s ease,
+        opacity 0.4s ease,
+        visibility 0.4s;
+}
+.aleart.show {
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+.aleart span{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.aleart .close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

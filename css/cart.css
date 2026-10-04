@@ -129,3 +129,41 @@ body.page-exit{
     height: 2rem;
     width: 2rem;
 }
+
+/*payment */
+.payment{
+    position: fixed;
+    left: .5rem;
+    right: .5rem;
+    bottom: 65px;
+    background: var(--bg-section);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--boder);
+}
+.payment .price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment .btn-payment{
+    width: 100%;
+    font-size: 1rem;
+    font-family: "vazir";
+    padding: .3rem 0;
+    border-radius: .4rem;
+    border: none;
+    background: var(--star);
+    color: var(--ba-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+.payment .price .price-span{
+    color: var(--star);
+    font-size: 1.2rem;
+}
